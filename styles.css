@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;    
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1.2rem;
+    min-height: 100%;
+}
+
+.grid_container > * {
+    box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.navbar {
+    grid-area: navbar;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* .nav ul {    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 900px;
+    list-style: none;
+    text-decoration: none;
+    color: white;
+
+} */
+
+
+
+.main {
+    grid-area: main;
+    background-color: blueviolet;
+}
+
+.item-1 {
+    grid-area: item-1;
+    background-color: white;
+}
+
+.item-2 {
+    grid-area: item-2;
+    background-color: white;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: lightcoral;
+}
+
+.grid_container {
+    display: grid;
+    gap: 5px;
+    grid-template:
+    "navbar" 50px
+    "main"   auto
+    "item-1" auto
+    "item-2" auto
+    "footer" 50px / auto;
+}
+
+@media (min-width: 600px) {
+    .grid_container{
+        grid-template:
+        "navbar navbar" 70px
+        "main   main"   auto
+        "item-1 item-2" auto
+        "footer footer" 70px / auto;
+    }
+
+    .navbar ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 900px;
+        list-style: none;
+        text-decoration: none;
+        color: white;
+    }
+}
